@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRF Endpoints - Advanced Web Development</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 40px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; margin-bottom: 10px; font-size: 28px; border-bottom: 2px solid #3498db; padding-bottom: 15px; }
+        .subtitle { color: #7f8c8d; margin-bottom: 30px; font-size: 14px; }
+        h2 { color: #2980b9; font-size: 16px; margin-top: 30px; margin-bottom: 15px; }
+        .system-info { background: #ecf0f1; padding: 15px; border-radius: 4px; margin-bottom: 30px; font-size: 13px; line-height: 1.6; }
+        .system-info p { margin-bottom: 8px; }
+        .endpoint-card { padding: 15px; margin-bottom: 10px; background: #fafbfc; border-left: 3px solid #3498db; border-radius: 4px; transition: all 0.2s; }
+        .endpoint-card:hover { background: #ecf0f1; }
+        .method { display: inline-block; font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-right: 10px; }
+        .get { background: #d4edda; color: #155724; }
+        .post { background: #cce5ff; color: #004085; }
+        .endpoint-card a { color: #3498db; text-decoration: none; font-weight: 500; font-size: 15px; }
+        .endpoint-card a:hover { text-decoration: underline; }
+        .endpoint-card small { display: block; color: #7f8c8d; font-size: 12px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Advanced Web Development</h1>
+    <p class="subtitle">DRF Endpoints</p>
+    
+    <div class="system-info">
+        <p><strong>Environment:</strong> Python 3.10+ | Django 4.2 | DRF 3.14</p>
+        <p><strong>Database:</strong> SQLite (Optimized for 3NF Reporting)</p>
+    </div>
+
+    <h2>Complex Analytical Endpoints</h2>
+    
+    <div class="endpoint-card">
+        <span class="method post">POST</span>
+        <a href="/api/data/add/">Register New Admission</a>
+        <small>Standard POST to save new patient information.</small>
+    </div>
+
+    <div class="endpoint-card">
+        <span class="method get">GET</span>
+        <a href="/api/analysis/demographic-stats/">Senior High-Risk Stats</a>
+        <small>Filtering (Age/HbA1c) + Aggregation (Avg Stay/Count).</small>
+    </div>
+
+    <div class="endpoint-card">
+        <span class="method get">GET</span>
+        <a href="/api/analysis/chronic-readmissions/">Chronic Visit Analysis</a>
+        <small>Complex Filtering using Q-Objects (OR Logic) for high-visit patients.</small>
+    </div>
+
+    <div class="endpoint-card">
+        <span class="method get">GET</span>
+        <a href="/api/analysis/medication-insulin/">Insulin & Med Summary</a>
+        <small>Aggregation (Annotate) grouping by Insulin Level for medication averages.</small>
+    </div>
+
+    <div class="endpoint-card">
+        <span class="method get">GET</span>
+        <a href="/api/analysis/complex-clinical/">Clinical Deep-Search</a>
+        <small>Multi-field Filtering (Diabetes Med + Diagnoses + Stay Length).</small>
+    </div>
+
+    <div class="endpoint-card">
+        <span class="method get">GET</span>
+        <a href="/api/analysis/gender-metrics/">Gender Clinical Metrics</a>
+        <small>Database-wide Aggregation grouping by the 'Sex' field.</small>
+    </div>
+</div>
+
+</body>
+</html>
